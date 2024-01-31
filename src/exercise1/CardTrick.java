@@ -8,7 +8,7 @@ import java.util.Scanner;
  *
  * @author dancye
  * @author Paul Bonenfant Jan 25, 2022 
- * @author Sim Yuan Hee Jan 2024
+ * @author Sim Yuan Hee Jan 31, 2024
  */
 public class CardTrick {
     
@@ -51,7 +51,8 @@ public class CardTrick {
         //       1 for Hearts, 2 for Diamonds, etc. (remember arrays are 0-based though)
         // 
         // Then loop through the cards in the array to see if there's a match.
-        
+	// If the guess is successful, invoke the printInfo() method below.
+	    
         for (int i = 0; i < hand.length; i++) 
         {
             int gottenValue = hand[i].getValue();
@@ -68,36 +69,30 @@ public class CardTrick {
             {
                 System.out.println("No match for the %sth card".formatted(i + 1));
             }
-        }
-        
-        // If the guess is successful, invoke the printInfo() method below.
-        
+        }    
     }
 
     /**
      * A simple method to print out personal information. Follow the instructions to 
      * replace this information with your own.
      * @author Paul Bonenfant Jan 2022
+     * @author Sim Yuan Hee Jan 2024
      */
     private static void printInfo() {
     
         System.out.println("Congratulations, you guessed right!");
         System.out.println();
         
-        System.out.println("My name is Paul, but you can call me prof, Paul or sir");
+        System.out.println("My name is Sim (Actually Yuan Hee should be my first name, but my name order is different.). You can call me Nathan");
         System.out.println();
         
         System.out.println("My career ambitions:");
-        System.out.println("-- Be more active on LinkedIn");
-        System.out.println("-- Have a semester with no violations of academic integrity!");
+        System.out.println("-- Improve my art and animation skills");
+        System.out.println("-- Use my programming skill for the greater good");
 	System.out.println();	
 
         System.out.println("My hobbies:");
-        System.out.println("-- Investing");
-        System.out.println("-- Cooking");
-        System.out.println("-- Reading/Watching TV");
-        System.out.println("-- Riding my motorcycle");
-
+        System.out.println("-- Animation");
         System.out.println();
         
     
