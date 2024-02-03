@@ -56,18 +56,18 @@ public class CardTrick {
         for (int i = 0; i < hand.length; i++) 
         {
             int gottenValue = hand[i].getValue();
-            if (gottenValue == value)
+            String gottenSuit = hand[i].getSuit();
+            
+            //Only when BOTH conditions meet at the SAME TIME, there is a MATCH. Annu's logic is correct here. 
+            if ((gottenValue == value) && (Card.SUITS[suit - 1].equals(gottenSuit)))
             {
-                String gottenSuit = hand[i].getSuit();
-                if(Card.SUITS[suit - 1].equals(gottenSuit))
-                {
-                   printInfo();
-                   break; 
-                }
+                printInfo();
+                break; 
             }
             else
             {
-                System.out.println("No match for the %sth card".formatted(i + 1));
+                System.out.println("No match for card %s".formatted(i + 1));
+                System.out.println("%sth card: ".formatted(i + 1) + hand[i] + "\n");
             }
         }    
     }
@@ -84,7 +84,7 @@ public class CardTrick {
         System.out.println("Congratulations, you guessed right!");
         System.out.println();
         
-        System.out.println("My name is Sim (Actually Yuan Hee should be my first name, but my name order is different.). You can call me Nathan");
+        System.out.println("My name is Sim (Actually Yuan Hee should be my first name, but my name order is different.). You can call me Nathan.");
         System.out.println();
         
         System.out.println("My career ambitions:");
@@ -95,8 +95,6 @@ public class CardTrick {
         System.out.println("My hobbies:");
         System.out.println("-- Animation");
         System.out.println();
-        
-    
     }
 
 }
